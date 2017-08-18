@@ -107,10 +107,8 @@ void gameStart(int x, int y)
 			if (arrow == 'p')
 			{
 				print_pause(snakeBody.lenth);
-				while (getKeyBoard() == 'p')
-				{
-					break;
-				}
+				while (getKeyBoard() != 'p');
+				break;
 			}
 		}
 
@@ -155,19 +153,15 @@ void gameStart(int x, int y)
 		if (flag)
 		{
 			print_over(snakeBody.lenth);
-			while (getKeyBoard() == '\r')
-			{
-				return;
-			}
+			while (getKeyBoard() != '\r');
+			return;
 		}
 
 		if (snakeBody.lenth == snakeMap.mapArea())
 		{
 			print_win(snakeBody.lenth);
-			while (getKeyBoard() == '\r')
-			{
-				return;
-			}
+			while (getKeyBoard() != '\r');
+			return;
 		}
 
 		snakeMap.printMap(snakeBody.lenth);
