@@ -4,6 +4,8 @@
 #include <windows.h>
 #include <conio.h>
 
+#define DELAY_TIME(div) (600 - (int)(400.0f * (div)))
+
 int getKeyBoard()
 {
 	int a = _getch();
@@ -170,7 +172,7 @@ void gameStart(int x, int y)
 
 		snakeMap.printMap(snakeBody.lenth);
 		arrow_last = arrow;
-		Sleep(600);
+		Sleep(DELAY_TIME((float)snakeBody.lenth/(float)snakeMap.mapArea()));
 	}
 }
 
