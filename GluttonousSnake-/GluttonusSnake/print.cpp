@@ -23,6 +23,7 @@ void print_start()
 	strcat_s(p, 512, "　　　　　　开始游戏\n");
 	system("cls");
 	puts(p);
+	delete[] p;
 }
 
 void print_set()
@@ -45,6 +46,7 @@ void print_set()
 	strcat_s(p, 512, "　　　　　设置地图大小\n");
 	system("cls");
 	puts(p);
+	delete[] p;
 }
 
 void print_exit()
@@ -67,6 +69,7 @@ void print_exit()
 	strcat_s(p, 512, "　　　　　　退出游戏\n");
 	system("cls");
 	puts(p);
+	delete[] p;
 }
 
 void print_setnumW(int &x, int &y)
@@ -89,6 +92,7 @@ void print_setnumW(int &x, int &y)
 	strcat_s(p, 512, "　　　　设置宽度（范围4-30）\n");
 	system("cls");
 	printf(p, x, y);
+	delete[] p;
 }
 
 void print_setnumH(int &x, int &y)
@@ -111,6 +115,7 @@ void print_setnumH(int &x, int &y)
 	strcat_s(p, 512, "　　　　设置高度（范围4-30）\n");
 	system("cls");
 	printf(p, x, y);
+	delete[] p;
 }
 
 void print_pause(int score)
@@ -132,6 +137,7 @@ void print_pause(int score)
 	strcat_s(p, 512, "　　　　　按P键继续游戏\n");
 	system("cls");
 	printf(p, score);
+	delete[] p;
 }
 
 void print_win(int score)
@@ -153,6 +159,7 @@ void print_win(int score)
 	strcat_s(p, 512, "　　　　 按回车键继续游戏\n");
 	system("cls");
 	printf(p, score);
+	delete[] p;
 }
 
 void print_over(int score)
@@ -174,4 +181,5 @@ void print_over(int score)
 	strcat_s(p, 512, "　　　　 按回车键继续游戏\n");
 	system("cls");
 	printf(p, score);
+	delete[] p;
 }
